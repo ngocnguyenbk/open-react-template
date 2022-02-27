@@ -1,0 +1,15 @@
+
+version: "3"
+services:
+  web:
+    build: .
+    tty: true
+    container_name: open-react-template
+    ports:
+      - "5000:3000"
+      - "5002:3002"
+    volumes:
+      - "../open-react-template:/open-react-template"
+      - node_modules:/open-react-template/node_modules
+volumes:
+  node_modules:
